@@ -908,10 +908,6 @@
 //     {name: 'Ermek',surname:'Akanov', age: 27},       
 // ]
 // };
-
-
-
-
 //     for(let el in student.students){    
 //     if(student.students[el].age>19){
 //         console.log(student.students[el].name);
@@ -1083,9 +1079,7 @@
 //     // debugger; /////работа с отладчиком js как найти ошибку  
 //     // res.push(employees[key].salary);
 // }
-
 // console.log(res+sum);
-
 
 //////////////8//////////////////////
 // let users=[
@@ -1105,6 +1099,13 @@
 //     name:'Sam',
 //     }
 // ];
+
+// for(el of Array.of(...users)){
+//     if ((el.login == '') || (el.password == '') || (el.name == '')){
+//         users.splice(users.indexOf(el), 1);
+//     }
+// }
+
 
 // for(let i = 0; i<users.length;){
 
@@ -1426,10 +1427,306 @@
 // }
 // console.log(setSeason(season));
 
-//////21
+//// 20 /////
 
-//////22
+// const figth_club = {
+//     name : "figth_club",
+//     genre : "triller",
+//     year : 2000
+// }
 
-//////23
+// const avatar = {
+//     name : "avatar",
+//     genre : "si-fi",
+//     year : 2009
+// }
 
-     
+// const titanic = {
+//     name : "titanic",
+//     genre : "drama",
+//     year : 2000
+// }
+
+// const batman = {
+//     name : "batman",
+//     genre : "si-fi",
+//     year : 2022
+// }
+// const movie_array = [figth_club, avatar, titanic, batman];
+
+
+// const getGenreFromMoviesArray = (movies_array, genre) => {
+
+//     const movies = [];
+
+//     if(movie_array.genre === genre) {
+//         movies.push(movie_array[i])
+//     }
+
+//     console.log(movies)
+
+// }
+
+// const getYearFromMoviesArray = (movies_array, year) => {
+
+//     const movies = [];
+
+//    for(let i = 0; i < movie_array.length; i++) { // тут почему не сработало?
+       
+//      if(movie_array[i].year > year) {
+
+//         movies.push(movie_array[i]);
+//      }
+//    }
+
+//     console.log(movies)
+// }
+
+
+// const searchMovieByGenre = (arrMovies, genre) => {
+//     const newArrMovies = []
+//     arrMovies.map(movie => {
+//         if (movie.genre === genre) {
+//             newArrMovies.push(movie)
+//         }
+//     })
+//     console.log(newArrMovies);
+// }
+
+// const searchMovieByYear = (arrMovies, year) => {
+//     const newArrMovies = []
+//     arrMovies.map(movie => {
+//       if (movie.year > year) {
+//         newArrMovies.push(movie)
+//       } 
+//     })
+//     console.log(newArrMovies);
+//   }
+  
+// searchMovieByGenre(movie_array,"drama");
+// searchMovieByYear(movie_array,2000);
+
+
+
+///////////// 21 ////////////
+
+
+// const users = [
+// 	{
+// 		login: "alice19",
+// 		password: "alice19",
+// 		name: ""
+// 	},
+// 	{
+// 		login: "richard1",
+// 		password: "richard18",
+// 		name: "Richard"
+// 	},
+// 	{
+// 		login: "sam22",
+// 		password: "",
+// 		name: "Sam"
+// 	}
+// ]
+
+// const changeProperty = (obj, key, new_value) => {
+
+//     let index = users.indexOf(obj);
+
+//     users[index][key] = new_value;
+// }
+
+// changeProperty(users[0], "login", "alice5555");
+
+// console.log(users);
+
+
+
+
+///// 22 ///////
+
+
+// const sumOfDigits = (num) => {
+//     let summa = 0;
+
+//     while (num > 0) {
+//         let lastDigit = num % 10;
+//         summa += lastDigit;
+
+//         num = parseInt(num / 10);
+//     }
+
+//     return summa;
+// }
+
+
+// const arr = [12, 43, 123, 44, 22];
+
+// console.log(arr);
+
+// // arr.map((el, index) => {
+// //     arr[index] = sumOfDigits(arr[index]);
+// // });
+
+// for (let i = 0; i < arr.length; i++) {
+//     arr[i] = sumOfDigits(arr[i]);
+// }
+
+// console.log(arr);
+
+
+
+
+////// 23 ////////
+
+
+// const allDividors = (num) => {
+//     const res = []; 
+
+//     for (let i = 1; i <= num; i++) {  // i: 1-48
+//         if (num % i == 0) {
+//             res.push(i);
+//         }
+//     }
+
+//     return res;
+// }
+
+// let num = 48;
+// console.log(allDividors(num));
+    
+
+/////////////////////homework 7
+
+// const arr=[10,120,11,22,34,13,1234];
+
+// function arrone(arr) {
+//     for(let i=1;i < arr.length+1; i++){
+//         // debugger;
+//         if(arr[i-1] < arr[i]){
+//             console.log(arr[i]);
+//         }
+//     }
+// }
+// arrone(arr);
+
+//////////////////////////////////////////////////////
+
+// const arr=[10,120,11,22,34,13];
+// const arr=[17,121,11,21,35,13];
+// let max=[];
+// for(let i =0;i<arr.length;i++){
+//     if(arr[i]%2==0){
+//         max.push(arr[i]);
+//     }
+// }
+// if(max.length==0){
+//     console.log('Error');
+    
+// }else{
+//     console.log(Math.max(...max));
+// }
+
+
+///////////////////////Medium////////////////////////
+
+// let d = {
+//     'OOP':[ 81,88,72,97],
+//     'ICT':[78,69,86,98],
+//     'MATH':[65,69,78,98],
+//     'PHYSICS': [87,99,66,70],
+// };
+// for(let el in d){
+//     let sum=0;
+//     for(let i =0;i<d[el].length;i++){
+//         sum+=d[el][i]/d[el].length;
+//     }
+//         d[el]=sum;
+// }
+// console.log(sum);
+
+/////////////////////////////////////////////////B//////////////////////////
+
+// let str="In the hole in the ground there lived a hobbit";
+
+// const first = text.index('h');
+// const last = text.lastIndexOf('h');
+
+// const s1= texx.slice(0,first);
+// let s2 = text.slice(first,last+1).split("").reverse().join("");
+// let s3 = text.slice(last+1);
+
+// console.log(s1+s2+s3);
+
+////////////////////////Hard///////////////////////
+
+
+/////////////////////////////////////////////////////A///////////////////////////
+// const arr=[10,120,11,22,34,13];
+// const arr=[16,120,12,24,36,12];
+// let max=[];
+// for(let i =0;i<arr.length;i++){
+//     if(arr[i]%2==1){
+//         max.push(arr[i]);
+        
+//     }
+// }
+// if(max.length==0){
+//     console.log('Error');
+    
+// }else{
+//     console.log('Число : ' + Math.max(...max));
+//     let lastNumber = (Math.max(...max))%10;
+//     max = parseInt(Math.max(...max)/ 10);
+//     let maxSum=lastNumber + max;
+//     console.log('Сумма : ' +maxSum);
+// }
+////////////////////////////////////////////////B/////////////////////////////////////
+
+//// Medium B ///
+
+// let text = prompt();
+
+// const first = text.indexOf("h");
+// const last = text.lastIndexOf("h");
+
+// let s1 = text.slice(0, first);
+// // let s2 = text.slice(first, last+1).split("").reverse().join("");
+// let s2 = "";
+// for (let i = last; i >= first; i--) {
+//     s2 += text[i];
+// }
+
+// let s3 = text.slice(last+1);
+
+// console.log(s1 + s2 + s3);
+
+// In the hole in the ground there lived a hobbit
+// abc h decode hokage h def
+
+
+
+//// Hard B ////
+
+// let a = Number(prompt()), b = Number(prompt());
+
+// const python = [], cpp = [], alone = [];
+
+// for (let i = 0; i < a; i++) {
+//     let name = prompt();
+//     python.push(name);
+// }
+// for (let i = 0; i < b; i++) {
+//     let name = prompt();
+//     cpp.push(name);
+// }
+
+// let same_cnt = 0;
+// for (let name of python) {
+//     if (cpp.includes(name)) {
+//         same_cnt++;
+//     }
+// }
+
+// // console.log(alone.length);
+// console.log(python.length + cpp.length - same_cnt*2);

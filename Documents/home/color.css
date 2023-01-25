@@ -1,0 +1,18 @@
+.btn{
+    background:red;
+}
+
+/* div{
+    background-color: yellowgreen;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+} */
+
+img{
+    display: block;
+    padding-left: 100px;
+}
